@@ -1,0 +1,233 @@
+							% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+							% Document Created 10 October 2009 by Chris Miller. %
+							% Copyright 2009 FSDEV.  All rights reserved.       %
+							% Academic endorsement.                             %
+							% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+ 
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pst-all}
+\usepackage{multicol}
+\usepackage[left=0.5in,top=0.5in,right=0.5in,nohead,nofoot]{geometry}
+\pagestyle{empty}
+\begin{document}
+\title{Equation Sheet}
+\author{Chris Miller}
+
+\newcommand{\sech}{\text{sech}}
+\newcommand{\csch}{\text{csch}}
+
+															% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+															\subsection*{Trigonometric Formulas}
+															% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+\begin{center}\begin{minipage}[center]{340pt}
+\begin{minipage}[left]{200pt}
+\include{pstricks/trig_diagram1}
+\end{minipage}
+\begin{minipage}[right]{120pt}
+$ \begin{array}{l}
+				  \sin \theta = \frac{y}{r} \\
+				  \cos \theta = \frac{x}{r} \\
+				  \tan \theta = \frac{y}{x}
+				 \end{array} $ \hfill
+\end{minipage}\end{minipage}\end{center}
+
+\begin{multicols}{2}											\subsubsection*{Reciporicals}
+
+$ \cot \theta = \frac{1}{\tan \theta} $ \hfill
+$ \sec \theta = \frac{1}{\cos \theta} $ \hfill
+$ \csc \theta = \frac{1}{\sin \theta} $
+
+															\subsubsection*{Definitions}
+
+$ \cot \theta = \frac{\cos \theta}{\sin \theta} $ \hfill
+$ \sec \theta = \frac{1}{\cos \theta} $ \hfill
+$ \csc \theta = \frac{1}{\sin \theta} $
+
+															\subsubsection*{Hyperbolic}
+															
+$ \sinh \theta = \frac{ e ^{\theta} - e ^{-\theta} }{ 2 } $ \hfill
+$ \cosh \theta = \frac{ e ^{\theta} + e ^{-\theta} }{ 2 } $ \hfill
+$ \tanh \theta = \frac{ e ^{\theta} - e ^{-\theta} }{ e ^{\theta} + e ^{-\theta} } $
+
+															\subsubsection*{Pythagorean}
+
+$ \sin ^{2} \theta + \cos ^{2} \theta = 1 $ \hfill
+$ \tan ^{2} \theta + 1 = \sec ^{2} \theta $ \hfill
+$ 1 + \cot ^{2} \theta = \csc ^{2} \theta $
+
+															\subsubsection*{Cofunction}
+
+$ \sin (\frac{\pi}{2} - \theta ) = \cos \theta $ \hfill
+$ \cos (\frac{\pi}{2} - \theta ) = \sin \theta $ \hfill
+$ \tan (\frac{\pi}{2} - \theta ) = \cot \theta $
+
+															\subsubsection*{Even/Odd}
+
+$ \sin -\theta = -\sin \theta $ \hfill
+$ \cos -\theta = \cos \theta $ \hfill
+$ \tan -\theta = -\tan \theta $
+
+															\subsubsection*{Double Angle}
+
+\begin{center} $ \begin{array}{l}
+				  \sin 2\theta = 2\sin\theta\cos\theta \\
+				  \cos 2\theta = \cos ^{2} \theta - \sin ^{2} \theta \\
+				  \cos 2\theta = 1 - 2\sin ^{2}\theta
+				 \end{array} $ \end{center}
+
+															\subsubsection*{Half-Angle}
+
+$ \sin ^{2} \theta = \frac{1 - \cos 2 \theta}{2} $ \hfill
+$ \cos ^{2} \theta = \frac{1+\cos 2\theta}{2} $
+
+															\subsubsection*{Addition}
+
+\[ \sin ( a + b ) = \sin a\cos b + \cos a\sin b \]
+\[ \cos ( a + b ) = \cos a\cos b - \sin a\sin b \]
+
+															\subsubsection*{Subtraction}
+
+\[ \sin ( a - b ) = \sin a\cos b - \cos a\sin b \]
+\[ \cos ( a - b ) = \cos a\cos b + \sin a\sin b \]
+
+															\subsubsection*{Sum}
+
+\[ \sin u + \sin v = 2\sin \frac{u+v}{2}\cos \frac{u-v}{2} \]
+\[ \cos u + \cos v = 2\cos \frac{u+v}{2}\cos \frac{u-v}{2} \]
+
+															\subsubsection*{Product}
+
+\[ \sin u\sin v = \frac{1}{2}\left[ \cos(u-v)-\cos(u+v) \right] \]
+\[ \cos u\cos v = \frac{1}{2}\left[ \cos(u-v)+\cos(u+v) \right] \]
+\[ \sin u\cos v = \frac{1}{2}\left[ \sin(u+v)+\sin(u-v) \right] \]
+\[ \cos u\sin v = \frac{1}{2}\left[ \sin(u+v)-\sin(u-v) \right] \]
+
+\end{multicols}												\subsubsection*{Unit Circle}
+
+\begin{center}\begin{minipage}[center]{400pt}\begin{minipage}[left]{200pt}
+\include{pstricks/unit_circle}
+\end{minipage}
+\begin{minipage}[right]{180pt}
+\begin{tabular}{llll}
+$\sin 0 =$ & $0$							&$\cos 0 =$ & $1$										\\
+$\sin\frac{\pi}{6} =$ & $\frac{1}{2}$		&$\cos \frac{\pi}{6} =$ & $\frac{\sqrt{3}}{2}$			\\
+$\sin\frac{\pi}{4} =$ & $\frac{\sqrt{2}}{2}$
+											&$\cos \frac{\pi}{4} =$ & $\frac{\sqrt{2}}{2}$			\\
+$\sin\frac{\pi}{3} =$ & $\frac{\sqrt{3}}{2}$
+											&$\cos \frac{\pi}{3} =$ & $\frac{1}{2}$					\\
+$\sin\frac{\pi}{2} =$ & $1$					&$\cos \frac{\pi}{2} =$ & $0$							\\
+$\sin\frac{2\pi}{3} =$ & $\frac{\sqrt{3}}{2}$
+											&$\cos \frac{2\pi}{3} =$ & $-\frac{1}{2}$				\\
+$\sin\frac{3\pi}{4} =$ & $\frac{\sqrt{2}}{2}$
+											&$\cos \frac{3\pi}{4} =$ & $-\frac{\sqrt{2}}{2}$		\\
+$\sin\frac{5\pi}{6} =$ & $\frac{1}{2}$		&$\cos \frac{5\pi}{6} =$ & $-\frac{\sqrt{3}}{2}$		\\
+$\sin\pi =$ & $0$							&$\cos\pi =$ & $-1$										\\
+\end{tabular}
+\end{minipage}\end{minipage}\end{center}
+															% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+\pagebreak\begin{multicols}{2}								\subsection*{Derivative Formulas}
+															% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+															\subsubsection*{General Rules}
+
+\begin{center} $ \begin{array}{l}
+   \frac{d}{dx} \left[ f(x) \pm g(x) \right] = f ^\prime (x) \pm g ^\prime (x) \\
+   \frac{d}{dx} \left[ f \left( g(x) \right) \right] = f ^\prime  \left( g(x) \right) g ^\prime (x) \\
+   \frac{d}{dx} \left[ cf(x) \right] = cf ^\prime (x) \\
+   \frac{d}{dx} \left[ f(x)g(x) \right] = f ^\prime (x)g(x) + f(x)g ^\prime (x) \\
+   \frac{d}{dx} \left[ \frac{f(x)}{g(x)} \right] = \frac{f ^\prime (x)g(x)-f(x)g ^\prime (x)}{ \left[ g(x) \right] ^{2}}
+  \end{array} $ \end{center}		
+															\subsubsection*{Power Rules}
+
+$ \frac{d}{dx}\: x^{r} = rx^{r - 1} $ \hfill
+$ \frac{d}{dx}\: c = 0 $ \hfill
+$ \frac{d}{dx}\: cx = c $ \hfill
+$ \frac{d}{dx}\: \sqrt{x} = \frac{1}{2 \sqrt{x} } $
+
+															\subsubsection*{Exponential Rules}
+
+$ \begin{array}{ll}
+   \frac{d}{dx}\: e^{x} = e^{x} \\
+   \frac{d}{dx}\: e^{u(x)} = e^{u(x)}u ^\prime (x)
+  \end{array} $ \hfill
+$ \begin{array}{ll}
+   \frac{d}{dx}\: a^{x} = a^{x} \ln a \\
+   \frac{d}{dx}\: e^{rx} = re^{rx}
+  \end{array} $ \hfill
+$ \frac{d}{dx} \ln x = \frac{1}{x} $
+
+															\subsubsection*{Trigonometric Rules}
+
+$ \begin{array}{ll}
+   \frac{d}{dx}\: \sin x = \cos x \\
+   \frac{d}{dx}\: \tan x = \sec ^{2} x \\
+   \frac{d}{dx}\: \sec x = \sec x \tan x
+  \end{array} $ \hfill
+$ \begin{array}{ll}
+   \frac{d}{dx}\: \cos x = -\sin x \\
+   \frac{d}{dx}\: \cot x = -\csc ^{2} x \\
+   \frac{d}{dx}\: \csc x = -\csc x \cot x
+  \end{array} $
+
+															\subsubsection*{Inverse Trigonometric Rules}
+
+$ \begin{array}{ll}
+   \frac{d}{dx}\: \sin ^{-1} x = \frac{1}{\sqrt{1 - x ^{2} }} \\
+   \frac{d}{dx}\: \tan ^{-1} x = \frac{1}{1 + x ^ {2}} \\
+   \frac{d}{dx}\: \sec ^{-1} x = \frac{1}{|x|\sqrt{x^{2}-1}}
+  \end{array} $ \hfill
+$ \begin{array}{ll}
+   \frac{d}{dx}\: \cos ^{-1} x = \frac{-1}{\sqrt{1 - x ^{2} }} \\
+   \frac{d}{dx}\: \cot ^{-1} x = \frac{-1}{1 + x ^ {2}} \\
+   \frac{d}{dx}\: \csc ^{-1} x = \frac{-1}{|x|\sqrt{x^{2}-1}}
+  \end{array} $
+
+															\subsubsection*{Hyperbolic Rules}
+
+$ \begin{array}{ll}
+   \frac{d}{dx}\: \sinh x = \cosh x \\
+   \frac{d}{dx}\: \tanh x = \sech x \\
+   \frac{d}{dx}\: \sech x = -\sech x \tanh x
+  \end{array} $ \hfill
+$ \begin{array}{ll}
+   \frac{d}{dx}\: \cosh x = \sinh x \\
+   \frac{d}{dx}\: \coth x = -\csch ^{2} x \\
+   \frac{d}{dx}\: \csch x = -\csch x \coth x
+  \end{array} $
+
+															\subsubsection*{Inverse Hyperbolic Rules}
+															
+$ \begin{array}{ll}
+   \frac{d}{dx}\: \sinh ^{-1} x = \frac{1}{\sqrt{1 + x ^{2}}} \\
+   \frac{d}{dx}\: \tanh ^{-1} x = \frac{1}{1 - x ^{2}} \\
+   \frac{d}{dx}\: \sech ^{-1} x = \frac{-1}{x \sqrt{1 - x ^{2}}}
+  \end{array} $ \hfill
+$ \begin{array}{ll}
+   \frac{d}{dx}\: \cosh ^{-1} x = \frac{1}{\sqrt{x ^{2} - 1}} \\
+   \frac{d}{dx}\: \coth ^{-1} x = \frac{1}{1 - x ^{2}} \\
+   \frac{d}{dx}\: \csch ^{-1} x = \frac{-1}{|x|\sqrt{x ^{2} + 1}}
+  \end{array} $
+
+\end{multicols}
+															% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+															\subsection*{Methods}
+															% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+\begin{multicols}{2}
+
+															\subsubsection*{Linear Approximation}
+
+The linear approximation of $f(x)$ at $x=x_{0}$ is
+\[ L(x) = f(x_{0}) + f^\prime (x_{0})(x-x_{0}) \]
+
+															\subsubsection*{Newton's Method}
+
+$f(x_{n})\approx 0$ for
+
+\[ x_{n+1} = x_{n} - \frac{f(x_{n})}{f^\prime (x_{n})}, n=0,1,2,3,... \]
+
+\end{multicols}
+\end{document}

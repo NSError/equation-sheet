@@ -1,0 +1,4 @@
+ul.no-bullets { list-style: none }
+ul.horizontal li { float: left; margin-right: 2em; }
+div.about-disclaimer { float: right; margin-top: 1.44em }
+div.slight-bottom-pad { padding-bottom: 0.66em}
