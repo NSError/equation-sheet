@@ -1,4 +1,8 @@
-ul.no-bullets { list-style: none }
-ul.horizontal li { float: left; margin-right: 2em; }
+body { padding: 1.0em }
 div.about-disclaimer { float: right; margin-top: 1.44em }
 div.slight-bottom-pad { padding-bottom: 0.66em}
+h1 { font-size: 1.88em; line-height: 1.99em }
+h2 { font-size: 1.44em; line-height: 1.55em }
+p { margin-bottom: 0.33em }
+ul { list-style: disc; margin-bottom: 0.33em }
+ul li { margin-left: 1.44em }
