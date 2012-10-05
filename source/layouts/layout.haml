@@ -1,0 +1,54 @@
+!!! 5
+%html{lang: 'en'}
+
+  %head
+    %meta{charset: 'utf-8'}
+    
+    %title= current_page.data['title']
+    %meta{name: 'author', content: 'Chris Miller'}
+    %meta{name: 'description', content: current_page.data['description']}
+
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+
+    / Le styles
+    = stylesheet_link_tag 'application'
+
+    / Let HTML5 shim, for IE6-8 support of HTML5 elements
+    /[if lt IE 9]
+      %script{src: 'http://html5shim.googlecode.com/svn/trunk/html5.js', type: 'text/javascript'}
+
+    = javascript_include_tag 'application'
+    %script{type: 'text/x-mathjax-config'}
+      :plain
+        MathJax.Hub.Config({
+          showProcessingMessages: false,
+          menuSettings: {
+            zoom: "Double-Click",
+            mpContext: true,
+            mpMouse: false
+          },
+          TeX: {
+            TagSide: 'left',
+            Macros: {
+              sech: '\\text{sech}',
+              csch: '\\text{csch}'
+            }
+          }
+        });
+    %script{src: 'http://cdn.mathjax.org/mathjax/2.1-beta/MathJax.js?config=TeX-AMS-MML_HTMLorMML', type: 'text/javascript'}
+
+  %body
+
+    %header.container= yield_content :header
+
+    %article.container= yield
+
+    %footer.container
+      %hr/
+      %dl.dl-horizontal
+        %dt &copy; 2009 - #{Date.today.year}
+        %dd
+          %p.muted
+
+            <a href="http://nserror.me/">Christopher Miller</a>. All rights
+            reserved.

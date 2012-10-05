@@ -1,0 +1,330 @@
+---
+title: Calculus Equation Sheet
+
+---
+%h1#trig-formulae Trigonometric Formulas
+
+.row
+  .span8
+    #trig-dia
+  .span4#identity-formulae
+    :plain
+      \[
+        \begin{array}{l}
+          \sin \theta = \frac{y}{r} \\
+          \cos \theta = \frac{x}{r} \\
+          \tan \theta = \frac{y}{x}
+        \end{array}
+      \]
+
+.row
+  .span6
+
+    %h2 Reciporicals
+    .row
+      .span2
+        :plain
+          \[ \cot \theta = \frac{1}{\tan \theta} \]
+      .span2
+        :plain
+          \[ \sec \theta = \frac{1}{\cos \theta} \]
+      .span2
+        :plain
+          \[ \csc \theta = \frac{1}{\sin \theta} \]
+
+    %h2 Definitions
+    .row
+      .span2
+        :plain
+          \[ \cot \theta = \frac{\cos \theta}{\sin \theta} \]
+      .span2
+        :plain
+          \[ \sec \theta = \frac{1}{\cos \theta} \]
+      .span2
+        :plain
+          \[ \csc \theta = \frac{1}{\sin \theta} \]
+
+    %h2 Hyperbolic
+    .row
+      .span2
+        :plain
+          \[ \sinh \theta = \frac{ e ^{\theta} - e ^{-\theta} }{ 2 } \]
+      .span2
+        :plain
+          \[ \cosh \theta = \frac{ e ^{\theta} + e ^{-\theta} }{ 2 } \]
+      .span2
+        :plain
+          \[ \tanh \theta = \frac{ e ^{\theta} - e ^{-\theta} }{ e ^{\theta} + e ^{-\theta} } \]
+
+    %h2 Pythagorean
+    .row
+      .span2
+        :plain
+          \[ \sin ^{2} \theta + \cos ^{2} \theta = 1 \]
+      .span2
+        :plain
+          \[ \tan ^{2} \theta + 1 = \sec ^{2} \theta \]
+      .span2
+        :plain
+          \[ 1 + \cot ^{2} \theta = \csc ^{2} \theta \]
+
+    %h2 Cofunction
+    .row
+      .span2
+        :plain
+          \[ \sin (\frac{\pi}{2} - \theta ) = \cos \theta \]
+      .span2
+        :plain
+          \[ \cos (\frac{\pi}{2} - \theta ) = \sin \theta \]
+      .span2
+        :plain
+          \[ \tan (\frac{\pi}{2} - \theta ) = \cot \theta \]
+
+    %h2 Even/Odd
+    .row
+      .span2
+        :plain
+          \[ \sin -\theta = -\sin \theta \]
+      .span2
+        :plain
+          \[ \cos -\theta = \cos \theta \]
+      .span2
+        :plain
+          \[ \tan -\theta = -\tan \theta \]
+
+    %h2 Double Angle
+    :plain
+      \[
+        \begin{array}{l}
+          \sin 2\theta = 2\sin\theta\cos\theta \\
+          \cos 2\theta = \cos ^{2} \theta - \sin ^{2} \theta \\
+          \cos 2\theta = 1 - 2\sin ^{2}\theta
+        \end{array}
+      \]
+
+  .span6
+
+    %h2 Half-Angle
+    .row
+      .span3
+        :plain
+          \[ \sin ^{2} \theta = \frac{1 - \cos 2 \theta}{2} \]
+      .span3
+        :plain
+          \[ \cos ^{2} \theta = \frac{1+\cos 2\theta}{2} \]
+
+    %h2 Addition
+    :plain
+      \[ 
+        \begin{array}{l}
+          \sin ( a + b ) = \sin a \cos b + \cos a \sin b \\
+          \cos ( a + b ) = \cos a \cos b - \sin a \sin b
+        \end{array}
+      \]
+
+    %h2 Subtraction
+    :plain
+      \[ 
+        \begin{array}{l}
+          \sin ( a - b ) = \sin a\cos b - \cos a\sin b \\
+          \cos ( a - b ) = \cos a\cos b + \sin a\sin b
+        \end{array}
+      \]
+
+    %h2 Sum
+    :plain
+      \[
+        \begin{array}{l}
+          \sin u + \sin v = 2\sin \frac{u+v}{2}\cos \frac{u-v}{2} \\
+          \cos u + \cos v = 2\cos \frac{u+v}{2}\cos \frac{u-v}{2}
+        \end{array}
+      \]
+
+    %h2 Product
+    :plain
+      \[ 
+        \begin{array}{l}
+          \sin u\sin v = \frac{1}{2}\left[ \cos(u-v)-\cos(u+v) \right] \\
+          \cos u\cos v = \frac{1}{2}\left[ \cos(u-v)+\cos(u+v) \right] \\
+          \sin u\cos v = \frac{1}{2}\left[ \sin(u+v)+\sin(u-v) \right] \\
+          \cos u\sin v = \frac{1}{2}\left[ \sin(u+v)-\sin(u-v) \right]
+        \end{array}
+      \]
+
+%h2 Unit Circle
+
+.row
+  .span7
+    #unit-circ
+  .span5
+    :ruby
+      unit_circle_equations=
+        # let f(x) = this   sin(f(x)) = this        cos(f(x)) = this
+       [[0,                 0,                      1],
+        ['\frac{\pi}{6}',   '\frac{1}{2}',          '\frac{\sqrt{3}}{2}'],
+        ['\frac{\pi}{4}',   '\frac{\sqrt{2}}{2}',   '\frac{\sqrt{2}}{2}'],
+        ['\frac{\pi}{3}',   '\frac{\sqrt{3}}{2}',   '\frac{1}{2}'],
+        ['\frac{\pi}{2}',   1,                      0],
+        ['\frac{2\pi}{2}',  '\frac{\sqrt{3}}{2}',   '-\frac{1}{2}'],
+        ['\frac{3\pi}{4}',  '\frac{\sqrt{2}}{2}',   '-\frac{\sqrt{2}}{2}'],
+        ['\frac{5\pi}{6}',  '\frac{1}{2}',          '-\frac{\sqrt{3}}{2}'],
+        ['\pi',             0,                      -1]
+      ] # & all this is just to reduce the amount of typing. ain't that special?
+    - unit_circle_equations.each do |row|
+      .row.paragraph-spacing
+        .span1
+          :plain
+            \( \sin #{row[0]} = \)
+        .span1
+          :plain
+            \( #{row[1]} \)
+        .span1.offset1
+          :plain
+            \( \cos #{row[0]} = \)
+        .span1
+          :plain
+            \( #{row[2]} \)
+
+%h1 Derivative Formulas
+
+.row
+  .span6
+
+    %h2 General Rules
+    :plain
+      \[
+        \begin{array}{l}
+          \frac{d}{dx} \left[ f(x) \pm g(x) \right] = f^\prime(x) \pm g^\prime(x) \\
+          \frac{d}{dx} \left[ f\left(g(x)\right) \right] = f^\prime\left(g(x)\right)g^\prime(x) \\
+          \frac{d}{dx} \left[ cf(x) \right] = cf ^\prime (x) \\
+          \frac{d}{dx} \left[ f(x)g(x) \right] = f ^\prime (x)g(x) + f(x)g ^\prime (x) \\
+          \frac{d}{dx} \left[ \frac{f(x)}{g(x)} \right] = \frac{f ^\prime (x)g(x)-f(x)g ^\prime (x)}{ \left[ g(x) \right] ^{2}}
+        \end{array}
+      \]
+
+    %h2 Power Rules
+    .row
+      .span3
+        :plain
+          \[
+            \begin{array}{l}
+              \frac{d}{dx}x^r=rx^{r-1} \\
+              \frac{d}{dx}cx=c
+            \end{array}
+          \]
+      .span3
+        :plain
+          \[
+            \begin{array}{l}
+              \frac{d}{dx}c=0 \\
+              \frac{d}{dx}\sqrt{x}=\frac{1}{2\sqrt{x}}
+            \end{array}
+          \]
+
+    %h2 Exponential Rules
+    .row
+      .span2
+        :plain
+          \[ \frac{d}{dx} e^x = e^x \]
+      .span2
+        :plain
+          \[ \frac{d}{dx} a^x = a^x \ln a \]
+      .span2
+        :plain
+          \[ \frac{d}{dx} \ln x = \frac{1}{x} \]
+    .row
+      .span3
+        :plain
+          \[ \frac{d}{dx} e^{u(x)} = e^{u(x)}u^\prime(x) \]
+      .span3
+        :plain
+          \[ \frac{d}{dx} e^{rx} = re^{rx} \]
+
+  .span6
+
+    %h2 Inverse Trigonometric Rules
+    .row
+      .span3
+        :plain
+          \[
+            \begin{array}{ll}
+              \frac{d}{dx}\: \sin^{-1}x=\frac{1}{\sqrt{1-x^2}} \\
+              \frac{d}{dx}\: \tan^{-1}x=\frac{1}{1+x^2} \\
+              \frac{d}{dx}\: \sec^{-1}x=\frac{1}{|x|\sqrt{x^2-1}}
+            \end{array}
+          \]
+      .span3
+        :plain
+          \[
+            \begin{array}{ll}
+              \frac{d}{dx}\: \cos ^{-1} x = \frac{-1}{\sqrt{1 - x ^{2} }} \\
+              \frac{d}{dx}\: \cot ^{-1} x = \frac{-1}{1 + x ^ {2}} \\
+              \frac{d}{dx}\: \csc ^{-1} x = \frac{-1}{|x|\sqrt{x^{2}-1}}
+            \end{array}
+          \]
+
+    %h2 Hyperbolic Rules
+    .row
+      .span3
+        :escaped
+          \[
+            \begin{array}{ll}
+              \frac{d}{dx}\sinh{x}=\cosh{x} \\
+              \frac{d}{dx}\tanh{x}=\sech{x} \\
+              \frac{d}{dx}\sech{x}=-\sech{x}\tanh{x}
+            \end{array}
+          \]
+      .span3
+        :escaped
+          \[
+            \begin{array}{ll}
+              \frac{d}{dx}\: \cosh x = \sinh x \\
+              \frac{d}{dx}\: \coth x = -\csch ^{2} x \\
+              \frac{d}{dx}\: \csch x = -\csch x \coth x
+            \end{array}
+          \]
+
+    %h2 Inverse Hyperbolic Rules
+    .row
+      .span3
+        :escaped
+          \[
+            \begin{array}{ll}
+              \frac{d}{dx}\: \sinh ^{-1} x = \frac{1}{\sqrt{1 + x ^{2}}} \\
+              \frac{d}{dx}\: \tanh ^{-1} x = \frac{1}{1 - x ^{2}} \\
+              \frac{d}{dx}\: \sech ^{-1} x = \frac{-1}{x \sqrt{1 - x ^{2}}}
+            \end{array}
+          \]
+      .span3
+        :escaped
+          \[
+            \begin{array}{ll}
+              \frac{d}{dx}\: \cosh ^{-1} x = \frac{1}{\sqrt{x ^{2} - 1}} \\
+              \frac{d}{dx}\: \coth ^{-1} x = \frac{1}{1 - x ^{2}} \\
+              \frac{d}{dx}\: \csch ^{-1} x = \frac{-1}{|x|\sqrt{x ^{2} + 1}}
+            \end{array}
+          \]
+
+.row
+  .span6.offset3
+    %h2 Trigonometric Rules
+    .row
+      .span3
+        :escaped
+          \[
+            \begin{array}{ll}
+              \frac{d}{dx}\: \sin x = \cos x \\
+              \frac{d}{dx}\: \tan x = \sec ^{2} x \\
+              \frac{d}{dx}\: \sec x = \sec x \tan x
+            \end{array}
+          \]
+      .span3
+        :escaped
+          \[
+            \begin{array}{ll}
+              \frac{d}{dx}\: \cos x = -\sin x \\
+              \frac{d}{dx}\: \cot x = -\csc ^{2} x \\
+              \frac{d}{dx}\: \csc x = -\csc x \cot x
+            \end{array}
+          \]
+
