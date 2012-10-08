@@ -25,13 +25,18 @@ $(document).ready ->
     # handle some vertical-centering issues with the equations to the 
     # right of the diagram
     identityFormulae= $('#identity-formulae')
-    $(identityFormulae).height $(trigDia).parent().height()
-    intervalId= window.setInterval( ->
-      mathjaxendisp= $(identityFormulae).children('.MathJax_Display:not(.MathJax_Processed)')
-      if mathjaxendisp.size() > 0
-        window.clearInterval intervalId
-        $(mathjaxendisp).css 'margin-top', "-#{$(mathjaxendisp).height() * 0.5}px"
-    , 250)
+    evtHandler = (e) ->
+      if e.target.parentNode.id == 'identity-formulae'
+        $(document).off 'DOMNodeInserted', '#identity-formulae .MathJax_Display', evtHandler
+        mathjax = $(e.target)
+        h = $(trigDia).parent().height()
+        bh = "#{h}px"
+        lh = "#{h-parseInt($(mathjax).css('margin-top'))-parseInt($(mathjax).css('margin-bottom'))}px"
+        $(identityFormulae).height bh
+        $(identityFormulae).css 'line-height', lh
+      else
+        console.log 'other event triggered'
+    $(document).on 'DOMNodeInserted', '#identity-formulae .MathJax_Display', evtHandler
     # yes, all that just to vertically align middle
 
     # wrap all objects into a list which will be transformed for scale at the end
@@ -46,6 +51,10 @@ $(document).ready ->
     xAxis= trigPaper.path "M-1,0L1,0"
     trigPaper.arrow -1, 0, 1, 0, 0.03
     trigPaper.arrow 1, 0, -1, 0, 0.03
+
+    # ray line
+
+    # arc
 
 
     # scale that sucker up - this way we can work with a circle with r=1 instead
