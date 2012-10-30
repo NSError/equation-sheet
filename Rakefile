@@ -19,3 +19,8 @@ desc 'build my equation sheet'
 task :'equation-sheet' => 'eqnsheet.pdf'
 
 task :default => :'equation-sheet'
+
+desc 'upload to teh webz'
+task :upload do
+  sh "rsync -avzh --delete --chmod=o=rx,g=rwx,u=rwx www/ fsdev.net:~/nserror.me/equation-sheet/"
+end
